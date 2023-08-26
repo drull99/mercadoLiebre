@@ -1,0 +1,171 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing:border-box;
+}
+header {
+    background-color: #EAC926;
+    font-family: 'Roboto', sans-serif;
+    width:100%;
+}
+
+header img{
+    width:30%;
+    margin:10px;
+}
+
+img.BannerOfertas{
+    max-width:100%;
+
+}
+
+nav ul{
+    display:none;
+}
+
+main{
+    
+    width:90%;
+    margin: auto;
+
+}
+
+.elemento{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    box-shadow : 0px 0px 10px rgb(100, 100, 100);
+}
+
+.elemento i{
+    color: #39b54a;
+    margin-left: 90%;
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    right: 20px;
+    top: -15px;
+    position:relative;
+}
+
+.elemento .renglon{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.elemento img{
+    width:100%;
+}
+
+
+.caja{
+    border-top: solid 1px #ebebeb;
+    padding:15px;
+}
+
+.precio{
+    font-size:18px;
+    width:30%;
+}
+
+.descuento{
+    font-size:16px;
+    color:rgb(51,230,34);
+    margin-bottom:20px;
+    width:70%;
+}
+
+.descripcion{
+    font-size:16px;
+}
+header div{
+    text-align:center;
+}
+
+nav ul {
+    list-style:none;
+
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:black;
+}
+
+header span.burguer-menu{
+    color:white;
+    background-color:blue;
+    font-size:40px;
+    margin:185px;
+}
+
+footer{
+    font-family: 'Roboto', sans-serif;
+    width:90%;
+    margin:auto;
+}
+
+footer ul{
+    list-style-type:none;
+    text-align:center;
+}
+
+footer ul li i{
+    color:blue;
+    text-align:center;
+    font-size:2em;
+    padding:10px;
+}
+
+footer ul li p b{
+    color:#666;
+}
+
+footer ul li p.anuncio{
+    color: rgb(184,183,182);
+    margin:30px;
+}
+
+h2{
+    font-size:24px;
+}
+
+@media(min-width:481px){
+    header span.burguer-menu{
+        display:none;
+    }
+    main section{
+        display:flex;
+        flex-direction: row;
+    }
+
+    section.elemento{
+        width:50%;
+    }
+    nav ul{
+        display:inline;
+    }
+    div.elemento{ 
+    box-shadow : 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+@media(min-width:769px){
+    header span.burguer-menu{
+        display:none;
+    }
+     nav ul{
+        display:inline;
+    }
+    div.elemento{
+    box-shadow : 0px 0px 10px rgb(100, 100, 100);
+}
+}
