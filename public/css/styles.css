@@ -86,6 +86,7 @@ main{
 main section{
     align-items: center;
 }
+
 .elemento1,
 .elemento2,
 .elemento3,
@@ -95,18 +96,11 @@ main section{
     margin-bottom:10px;
     max-width: 250px;
     box-shadow :none;
-    transition-property: box-shadow, i;
+    transition-property: box-shadow;
     transition-duration: 300ms;
 
 }
 
-.elemento1:hover,
-.elemento2:hover,
-.elemento3:hover,
-.elemento4:hover{
-    box-shadow:0px 0px 10px rgb(100, 100, 100) ;
-    
-}
 
 .elemento1 i,
 .elemento2 i,
@@ -129,13 +123,20 @@ main section{
     transition-duration: 0.5s;
 }
 
+.elemento1:hover,
+.elemento2:hover,
+.elemento3:hover,
+.elemento4:hover {
+    box-shadow:0px 0px 10px rgb(100, 100, 100) ;
+}
+
 .elemento1 i:hover,
 .elemento2 i:hover,
 .elemento3 i:hover,
 .elemento4 i:hover{
-    transform:rotateZ(90deg);
-}
-
+        transform:rotateZ(-90deg);
+    }
+.elemento
 .elemento1 .renglon,
 .elemento2 .renglon,
 .elemento3 .renglon,
@@ -173,9 +174,15 @@ main section{
 }
 
 .descripcion{
+    color:white;
     font-size:16px;
+    transition-property: color ;
+    transition-duration: 0.5s;
 }
 
+.descripcion:hover{
+    color:black;
+}
 nav ul {
     list-style:none;
 
@@ -194,6 +201,11 @@ footer{
     margin:auto;
 }
 
+ul.footer{
+    display:flex;
+    flex-direction: column;
+}
+
 footer ul{
     list-style-type:none;
     text-align:center;
@@ -204,6 +216,12 @@ footer ul li i{
     text-align:center;
     font-size:2em;
     padding:10px;
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+footer ul li i:hover{
+    color:red;
 }
 
 footer ul li p b{
@@ -457,6 +475,10 @@ input[type="email"]:focus::placeholder {
 
     div.elemento{
     box-shadow : 0px 0px 10px rgb(100, 100, 100);
-}
+    }
+
+    ul.footer{
+        flex-direction: row;
+    }
 
 }
