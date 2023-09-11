@@ -10,18 +10,70 @@ header {
     width:100%;
 }
 
+div.top-header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+}
+
 header img{
-    width:30%;
+    width:28vh;
     margin:10px;
 }
 
+.top-header{
+    justify-content: space-around;
+}
+
+header input{
+    outline: none;
+    color: #666;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 0;
+    padding-left: 5px;
+    background-color: #FFF;
+    width:100%;
+}
+
+header input,
+button {
+    border: none;
+    
+    outline: none;
+    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: white;
+    font: inherit;
+}
 img.BannerOfertas{
     max-width:100%;
 
 }
 
-nav ul{
+header nav ul{
     display:none;
+}
+
+header div.burguer-menu{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 30px;
+    height: 40px;
+    margin: 10px 0px 0px 45%;
+    padding: 2px 6px;
+    width: 40px;
+    text-align: center;
+}
+
+header h3 {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
 }
 
 main{
@@ -31,14 +83,35 @@ main{
 
 }
 
-.elemento{
+main section{
+    align-items: center;
+}
+.elemento1,
+.elemento2,
+.elemento3,
+.elemento4{
     display:flex;
     flex-direction: column;
     margin-bottom:10px;
-    box-shadow : 0px 0px 10px rgb(100, 100, 100);
+    max-width: 250px;
+    box-shadow :none;
+    transition-property: box-shadow, i;
+    transition-duration: 300ms;
+
 }
 
-.elemento i{
+.elemento1:hover,
+.elemento2:hover,
+.elemento3:hover,
+.elemento4:hover{
+    box-shadow:0px 0px 10px rgb(100, 100, 100) ;
+    
+}
+
+.elemento1 i,
+.elemento2 i,
+.elemento3 i,
+.elemento4 i{
     color: #39b54a;
     margin-left: 90%;
     display: block;
@@ -52,16 +125,31 @@ main{
     right: 20px;
     top: -15px;
     position:relative;
+    transition-property: all ;
+    transition-duration: 0.5s;
 }
 
-.elemento .renglon{
+.elemento1 i:hover,
+.elemento2 i:hover,
+.elemento3 i:hover,
+.elemento4 i:hover{
+    transform:rotateZ(90deg);
+}
+
+.elemento1 .renglon,
+.elemento2 .renglon,
+.elemento3 .renglon,
+.elemento4 .renglon{
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: space-between;
 }
 
-.elemento img{
+.elemento1 img,
+.elemento2 img,
+.elemento3 img,
+.elemento4 img{
     width:100%;
 }
 
@@ -81,13 +169,11 @@ main{
     color:rgb(51,230,34);
     margin-bottom:20px;
     width:70%;
+    justify-content: center;
 }
 
 .descripcion{
     font-size:16px;
-}
-header div{
-    text-align:center;
 }
 
 nav ul {
@@ -100,12 +186,7 @@ nav ul li a{
     color:black;
 }
 
-header span.burguer-menu{
-    color:white;
-    background-color:blue;
-    font-size:40px;
-    margin:185px;
-}
+
 
 footer{
     font-family: 'Roboto', sans-serif;
@@ -138,34 +219,244 @@ h2{
     font-size:24px;
 }
 
+/*estilos del formulario de registro*/
+
+.main__register{
+    margin: auto;
+}
+
+.register {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: start;
+    gap: 20px;
+    width: 90%;
+}
+
+.register input {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 0;
+}
+.register input[type='text'],  input[type='email'], input[type='date'], input[type='password']{
+    width: 100%;
+    padding-left: 5px;
+    margin: 10px;
+}
+
+.register input::placeholder{
+    font-size: 11px;
+}
+
+.intereses {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+.intereses label, .intereses input[type="checkbox"] {
+    display: inline-block;
+}
+
+.radiobuttons {
+    display: block;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.register h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin:10px;
+}
+
+.form__file__input{
+    margin: 0;
+    display: inline-block;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register input[type='reset'], input[type='submit'] {
+    width: 100%;
+}
+
+/*estilos del formulario de inicio de sesion*/
+
+.main__container__form {
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    font-size: 18px;
+    gap: 10px;
+    margin: 30px;
+}
+
+.btn__form {
+    margin-top: 20px;
+    padding: 4px 0;
+    background-color: #0044AA;
+    color: #FFF;
+    transition: background-color 0.2s;
+}
+
+.form_login input {
+
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.form_login 
+input[type="text"]:invalid,
+input[type="password"]:invalid {
+    margin:1px solid red;
+    background-color:  red;
+}
+
+.form_login .errorNick,
+.errorPassword{
+    display:none;
+}
+.form_login input[type="text"],
+input[type="password"] {
+    padding-left: 10px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+input[type="text"]:focus::placeholder,
+input[type="password"]:focus::placeholder,
+input[type="email"]:focus::placeholder {
+    color: white;
+}
+
+.btn__form:hover {
+    background-color: #0022AA;
+}
+
 @media(min-width:481px){
-    header span.burguer-menu{
+    header img{
+        width:28vh;
+        margin:10px;
+    }
+
+    header div.burguer-menu{
         display:none;
     }
-    main section{
+
+    .top-header{
+        flex-wrap: nowrap;
+        width:100%;
+    }
+
+    
+
+    .top-header .form div.search-bar{
+        font-size:50vh;
+        width:50%;
+        flex-grow: 1;
+    }
+
+    header nav.listas {
+        display:flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        width:100%;
+        align-items: end;
+        margin-bottom: 0px;
+    }
+
+    header nav ul.header-left{
+        display:flex;
+        font-size: 2vh;
+        gap:10px;
+    }
+
+    header nav ul.header-right{
+        display:flex;
+        font-size: 2vh;
+        gap:10px;
+    }
+
+   main section{ 
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        transition: box-shadow 0.3s;
+    }
+
+    .elemento1,
+    .elemento2,
+    .elemento3,
+    .elemento4{
+        max-width: 250px;
+        transition: box-shadow 0.3s;
+    }
+
+    /*register*/
+
+    .register{
+        max-width: 540px;
+    }
+
+    .intereses, .form__file__input{
+        margin-bottom: 20px;
+    }
+
+}
+
+@media(min-width:769px){
+    header img{
+        width:28vh;
+        margin:10px;
+    }
+
+    header .para-laptop{
         display:flex;
         flex-direction: row;
     }
 
-    section.elemento{
-        width:50%;
+    header .top-header{
+        width:60%;
     }
-    nav ul{
-        display:inline;
-    }
-    div.elemento{ 
-    box-shadow : 0px 0px 10px rgb(100, 100, 100);
-    }
-}
 
-@media(min-width:769px){
+    header h3.copy-header{
+        width:40%;
+    }
+
     header span.burguer-menu{
         display:none;
     }
+
      nav ul{
         display:inline;
     }
+
     div.elemento{
     box-shadow : 0px 0px 10px rgb(100, 100, 100);
 }
+
 }

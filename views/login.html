@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel ="stylesheet">
+    <script src="https://kit.fontawesome.com/a35a82ecf1.js" crossorigin="anonymous"></script>
+    <title>Registrate en Mercado Liebre</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <a href="/"><img src="images/logo-mercado-liebre.svg" class="logo"></a>
+            <form class="form" action="#" method="GET">
+                <input class="input" placeholder="Buscar productos, marcas y más" />
+                <button class="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+           
+            <h3 class="copy-header"><i class="fa-solid fa-hand-holding-dollar"></i> Compra en cuotas y sin tarjeta de credito</h3>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul>
+                <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+            </ul>
+        </nav>
+        <br>
+    <nav class="listas">
+        <ul class="header-left">
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Tiendas Oficiales</a></li>
+            <li><a href="#">Vender</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+<br>
+        <ul class="header-right">
+            <li><a href="/register">Crea tu cuenta<i class="fa-solid fa-address-card"></i></a></li>
+            <li><a href="/login">Ingresa<i class="fa-solid fa-right-to-bracket"></i></a></li>
+            <li><a href="/#">Mis compras<i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </nav>
+
+        <div class="burguer-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main class="main__container__form">
+        <h2>Inicie sesión</h2>
+        <section class="section__form">
+            
+            <form class="form_login">
+                
+                <input type="text" id="username" name="username" placeholder="Nombre de usuario" minlength="3"><span class="errorNick">ingresa un nombre de usuario valido</span><br>
+              
+                
+                <input type="password" id="password" name="password" placeholder="Contraseña" minlength="1"><span class="errorPassword">ingresa una contraseña</span><br>
+              
+                <input type="submit" value="Iniciar sesión" class="btn__form">
+              </form>
+        </section>
+    </main>
+</body>
+</html>
